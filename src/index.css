@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: 'Roboto Slab', serif;
+  }
+  h2 {
+    @apply text-huge font-bold;
+  }
+}
+
 @layer utilities {
     .clip-path-slant {
       clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
     }
-}  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');

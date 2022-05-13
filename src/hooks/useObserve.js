@@ -20,5 +20,8 @@ export default function useObserve(ref, callback, threshold = 0.8) {
             })
         }, OPTIONS)
         observer.observe(ref.current)
+        return () => {
+            observer.disconnect()
+        }
     }, [ref, threshold, callback])
 }

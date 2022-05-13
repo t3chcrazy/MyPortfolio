@@ -1,9 +1,13 @@
 import { useRef } from 'react'
 import useObserve from '../hooks/useObserve'
 
-function Project({ hasBorder }) {
-    
-}
+// function Project({ hasBorder }) {
+//     return (
+//         <div className = "">
+
+//         </div>
+//     )
+// }
 
 export default function Projects() {
     const viewRef = useRef()
@@ -12,7 +16,7 @@ export default function Projects() {
     
     return (
         <div className = "transition duration-700 transform translate-y-8 opacity-0 mb-24" ref = {viewRef}>
-            <h3 className = "text-huge font-bold">Projects</h3>
+            <h2>Projects</h2>
             <div className = "flex flex-col">
                 
             </div>

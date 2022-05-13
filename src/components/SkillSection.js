@@ -82,7 +82,7 @@ export default function SkillSection() {
 
     return (
         <div className = "transition duration-700 transform translate-y-8 opacity-0 mb-24" ref = {viewRef}>
-            <h3 className = "text-huge font-bold">Skills</h3>
+            <h2 className = "text-huge font-bold">Skills</h2>
             <div className = "flex wrap items-center lg:overflow-auto overflow-x-scroll">
                 {SKILLS.map(skill => <SkillDonut animate = {animate} key = {skill.title} skill = {skill} />)}
             </div>

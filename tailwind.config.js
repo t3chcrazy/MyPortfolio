@@ -18,6 +18,9 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: "class", // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      robotoSlab: ["Roboto Slab"]
+    },
     fontSize: {
       colossal: "60px",
       jumbo: "50px",
