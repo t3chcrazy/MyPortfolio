@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-export default function useObserve(ref, callback, threshold = 0.8) {
+export default function useObserve(ref, callback, threshold = 0.6) {
     useEffect(() => {
         const OPTIONS = {
             root: null,

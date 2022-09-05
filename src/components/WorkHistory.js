@@ -10,6 +10,9 @@ const HISTORY = [
     {
         title: "ShopSe",
         joinedAt: "19th Oct 2020",
+        positions: [
+            
+        ],
         responsibilities: [
             "Collaborated with designers to build pixel perfect UI, implementing performant and buttery smooth animations for delightful user experience",
             "Worked on multiple react and react-native projects and handled every stage of software lifecycle from creation to completion",
@@ -56,8 +59,9 @@ const HISTORY = [
 function JobTile({ job, isLast }) {
     const { title, joinedAt, lastDate, responsibilities, techStack } = job
     return (
-        <div className = {`relative ${!isLast? "border-l border-green-700": null} lg:pl-8 pl-4 pb-10`}>
-            <div className = "absolute -left-4 top-0 w-8 h-8 rounded-full bg-green-400" />
+        <div className = {`relative ${!isLast? "border-l-2 border-green-400": null} lg:pl-8 pl-4 pb-10 left-4`}>
+            <div className = "absolute top-0 w-8 h-8 rounded-full bg-green-400 border-white dark:border-gray-900 border-8" style = {{ left: -17 }} />
+            {!lastDate && <div className = "absolute top-0 w-8 h-8 rounded-full bg-green-400 animate-ping" style = {{ left: -17 }} />}
             <h3 className = "text-heading1 font-bold">{title}</h3>
             <div className = "text-gray-600 mt-3 mb-2">
                 {joinedAt} - {lastDate ?? "Present"}
@@ -67,7 +71,7 @@ function JobTile({ job, isLast }) {
                 {responsibilities.map(resp => <li key = {resp}>{resp}</li>)}
             </ul>
             <div className = "flex items-center">
-                {techStack.map((techImage, ind) => <img key = {ind} src = {techImage} className = "h-5" alt = "Technology used" />)}
+                {techStack.map((techImage, ind) => <img key = {ind} src = {techImage} className = "h-8 mr-2" alt = "Technology used" />)}
             </div>
         </div>
     )
@@ -80,7 +84,7 @@ export default function WorkHistory() {
 
     return (
         <div className = "transition duration-700 transform translate-y-8 opacity-0 mb-24" ref = {viewRef}>
-            <h2>Companies I have worked at</h2>
+            <h2>Work experience</h2>
             {HISTORY.map((job, ind, arr) => <JobTile key = {job.title} job = {job} isLast = {ind === arr.length-1} />)}
         </div>
     )

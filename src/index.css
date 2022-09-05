@@ -4,10 +4,17 @@
 
 @layer base {
   html {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Inter', sans-serif;
   }
   h2 {
-    @apply text-huge font-bold;
+    @apply font-bold text-heading1 lg:text-huge relative mb-10;
+  }
+  h2::after {
+    content: " ";
+    height: 1px;
+    z-index: -1;
+    top: calc(50% + 1px);
+    @apply bg-gray-500 absolute w-64 ml-3;
   }
 }
 
@@ -17,4 +24,4 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');

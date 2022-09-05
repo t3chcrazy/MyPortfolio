@@ -19,7 +19,7 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     fontFamily: {
-      robotoSlab: ["Roboto Slab"]
+      interSlab: ["Inter"]
     },
     fontSize: {
       colossal: "60px",
